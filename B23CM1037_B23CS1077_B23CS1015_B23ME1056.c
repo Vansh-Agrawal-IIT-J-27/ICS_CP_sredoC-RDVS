@@ -36,15 +36,23 @@ void LoadFromFile() {
 
     fscanf(file, "%d", &totalRecords);
     for (int i = 0; i < totalRecords; i++) {
-        fscanf(file, "%d %d %d %d %s %s %s %s %lld %d %s %s %s %s %d %d %d",
-                &hospitalRecords[i].MedicalRecordNumber,
-                &hospitalRecords[i].Day_of_Entry, &hospitalRecords[i].Month_of_Entry, &hospitalRecords[i].Year_of_Entry,
-                hospitalRecords[i].Patient_First_Name, hospitalRecords[i].Patient_Last_Name,
-                hospitalRecords[i].Patient_Father_First_Name, hospitalRecords[i].Patient_Mother_First_Name,
-                &hospitalRecords[i].Mobile_number, &hospitalRecords[i].age,
-                hospitalRecords[i].BloodGroup, hospitalRecords[i].Gender,
-                hospitalRecords[i].Doctor_Name, hospitalRecords[i].Doctor_Medical_Registration_Number,
-                &hospitalRecords[i].Day_of_Exit, &hospitalRecords[i].Month_of_Exit, &hospitalRecords[i].Year_of_Exit);
+        fscanf(file, "%d", &hospitalRecords[i].MedicalRecordNumber);
+        fscanf(file, "%d", &hospitalRecords[i].Day_of_Entry);
+        fscanf(file, "%d", &hospitalRecords[i].Month_of_Entry);
+        fscanf(file, "%d", &hospitalRecords[i].Year_of_Entry);
+        fscanf(file, "%s", hospitalRecords[i].Patient_First_Name);
+        fscanf(file, "%s", hospitalRecords[i].Patient_Last_Name);
+        fscanf(file, "%s", hospitalRecords[i].Patient_Father_First_Name);
+        fscanf(file, "%s", hospitalRecords[i].Patient_Mother_First_Name);
+        fscanf(file, "%lld", &hospitalRecords[i].Mobile_number);
+        fscanf(file, "%d", &hospitalRecords[i].age);
+        fscanf(file, "%s", hospitalRecords[i].BloodGroup);
+        fscanf(file, "%s", hospitalRecords[i].Gender);
+        fscanf(file, "%s", hospitalRecords[i].Doctor_Name);
+        fscanf(file, "%s", hospitalRecords[i].Doctor_Medical_Registration_Number);
+        fscanf(file, "%d", &hospitalRecords[i].Day_of_Exit);
+        fscanf(file, "%d", &hospitalRecords[i].Month_of_Exit);
+        fscanf(file, "%d", &hospitalRecords[i].Year_of_Exit);
     }
 
     fclose(file);
@@ -325,7 +333,7 @@ int main() {
         printf("5. View Data\n");
         printf("6. Exit\n");
         printf("Enter Your Choice: ");
-        scanf("%d", &choice);
+        scanf("%d", &choice);   
 
         switch (choice) {
             case 1:
