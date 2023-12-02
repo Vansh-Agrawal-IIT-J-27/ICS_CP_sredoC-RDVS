@@ -26,8 +26,8 @@ Search: Search for patient records by name, medical record number, or mobile num
 Edit Data: Modify existing patient records based on their medical record number.
 Delete Data: Remove patient records from the system using their medical record number.
 View Data: Display all stored patient records.
+
 File Management
 The system stores records in a file named hospital_records.txt. On startup, records are loaded from this file, and any modifications are saved back to it upon exit.
-
 
 This README provides an overview of the Hospital Management System, explaining its features, usage instructions, and basic guidelines for contribution and licensing. Adjustments can be made to tailor it further according to specific project requirements or additional information needed.
