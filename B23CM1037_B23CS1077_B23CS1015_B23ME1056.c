@@ -109,7 +109,7 @@ void New_Data() {
 
 // taking new entries from the user
     for (int i = totalRecords; i < totalRecords + n; i++) {
-        hospitalRecords[i].MedicalRecordNumber = i + 1;
+        hospitalRecords[i].MedicalRecordNumber = (hospitalRecords[i-1].MedicalRecordNumber + 1);
         printf("\nEnter details of Record %d\n", hospitalRecords[i].MedicalRecordNumber);
         printf("Patient's First Name: ");
         scanf("%s", hospitalRecords[i].Patient_First_Name);
